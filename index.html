@@ -3,62 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APACAS - Premium Alpaca Products</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
-</head>
-<body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <img src="/apacas.jpb" alt="Apacas Logo">
-                    <span class="ml-2 text-xl font-bold">APACAS</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
-                    <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
-                    <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <title>APACAS: A community of customer support pros in the Asia Pacific region</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Main Content -->
-    <main class="max-w-3xl mx-auto px-4 py-8">
-        <section class="text-center mb-12">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">Welcome to Apacas</h1>
-            <p class="text-xl text-gray-600">Discover the finest alpaca wool products, ethically sourced and sustainably made.</p>
-        </section>
+        body {
+            font-family: Optima, Candara, 'Noto Sans', source-sans-pro, sans-serif;
+            font-weight: normal;
+            color: #333;
+            background-color: #FFFCF3;
+        }
 
-        <section class="prose lg:prose-xl mx-auto mb-12">
-            <p>At Apacas, we believe in the extraordinary qualities of alpaca wool. Known for its incredible softness, durability, and warmth-to-weight ratio, our products represent the perfect blend of luxury and sustainability.</p>
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+       
+        /* Main Content */
+        main {
+            max-width: 800px;
+            margin: 20px auto 40px auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            text-align: left;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;  
+            margin-top: 2rem;  
             
-            <p>Each piece in our collection is carefully crafted to ensure the highest quality while maintaining our commitment to ethical farming practices and environmental responsibility.</p>
-        </section>
+        }
 
-        <!-- Newsletter Signup -->
-        <section class="bg-blue-50 rounded-lg p-8 shadow-md">
-            <div class="text-center mb-6">
-                <h2 class="text-2xl font-bold text-gray-900">Join Our Newsletter</h2>
-                <p class="text-gray-600 mt-2">Stay updated with our latest products and exclusive offers.</p>
-            </div>
-            <form class="max-w-md mx-auto">
-                <div class="flex gap-4">
-                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                        Subscribe
-                    </button>
-                </div>
-            </form>
+        .hero p {
+            font-size: 1.75rem;
+            color: #666;
+        }
+
+        .content {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+        }
+
+        .content ul, .content li {
+         font-size: 1.2rem;
+
+        }
+        /* Newsletter Section */
+        .newsletter {
+            background-color: #F9C475;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 60px 60px;
+        }
+        
+
+
+        .newsletter h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .signup-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+                        display: flex;
+            align-items: center;
+            justify-content:center
+        }
+
+        .signup-form input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .signup-form input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .signup-form .button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-form .button:hover {
+            background-color: #FA7D0C;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 4rem;
+            color: #666;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .signup-form {
+                flex-direction: column;
+            }
+
+            .signup-form button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section class="hero">
+            <h1>APACAS</h1>
+            <p>A customer support community for the Asia Pacific region</p>
+        </section>
+           <section class="content">
+           <p>On our half of the planet (and, who was Gerardus Mercator to tell us it's not the top half), we may not have easy access to a lot of customer support conferences and meetups, but there are plenty of us out there working in software companies and ecommerce sites and professional service firms.</p>
+           <p>Join APACAS and we can start to build our own community, while building our careers. And we can continue spell words correctly while we do it.</p> 
+
+        <section class="newsletter">
+            <h2>Subscribe for APACAS updates</h2>
+                         <p>Sharing APAC and global-remote customer support jobs, local events, and community news.</p>
+
+<form
+  action="https://buttondown.com/api/emails/embed-subscribe/mrpatto"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.com/mrpatto', 'popupwindow')"
+  class="signup-form"
+>
+  <label for="bd-email" style="margin-top:5px">Your email</label>
+  <input type="email" name="email" id="bd-email" />
+  
+  <input type="submit" value="Subscribe" class="button" />
+
+</form>
+        </section>
+     
+        <h2>APACAS for customer support professionals</h2>
+        <p> Whether you're a support veteran interested in knowing what's out there in the market, or someone looking to move into customer support, subscribe to the newsletter and you'll be the first to know when an opportunity arises.</p>
+            <p>You'll also find out about local conferences and meetups that don't require flying halfway around the planet, where you can meet with other people who do what you do.</p>
+            <h2>APACAS for companies looking to hire</h2>
+             <p><em>Selling</em> products and services to people all over the world without leaving the land-heavy comforts of the northern hemisphere is easy enough. <em>Supporting</em> southern hemisphere customers, on the other hand, can be trickier. Do you just make them wait for your US business hours, or run an overnight shift? Hire vampires?</p> 
+            <p>The obvious answer is to hire in Australia or New Zealand, choosing someone you can trust to work things out on their own for much of their work day. It's <strong>finding</strong> those people that's the tricky part. </p>         
+        <p>That's why APACAS exists. Bringing together all of the talented, eager, local support people to help match them to the right companies.</p> 
+            <p>If you're looking for your next (or your first!) APAC support hire, please let me know. I'll include relevant roles in our next newsletter, and might even be able to make a recommendation.</p>
+            <h2>Who's behind this thing?</h2>
+            <p>I'm <a href="https://www.linkedin.com/in/mathewpatterson/">Mat Patterson</a> (AKA <a href="https://mrpatto.com">mrpatto</a> or just patto). I joined <a href="https://campaignmonitor.com">Campaign Monitor</a> as the first customer support person and built out that team over nearly a decade. For the last 8 years I've been with <a href="https://www.helpscout.com/blog/the-supportive/">Help Scout</a>, talking about online customer support in all sorts of forms.</p>
+            <p>I didn't know another SaaS support person until I met <a href="https://www.linkedin.com/in/sarahhatter/">Sarah Hatter</a>, who went on to start <a href="https://www.elevatecx.co">ElevateCX</a>. I really know the benefits of a community of like-minded professionals. I have also received many, many requests from North American and European companies looking for help finding a great support person for their APAC teams.</p>
+            <p>There was never an easy answer for them. Let's make sure we have one now.</p>
+            <h2>Get in touch</h2>
+            <ul>
+            <li><a href="mailto:hello@mrpatto.com?subject=%5BAPACAS%5D%20I%20want%20to%20hire&body=Hey%20Mat%2C%20here's%20the%20deal">I want to hire a great APAC support person</a></li>
+            <li><a href="mailto:hello@mrpatto.com?subject=%5BAPACAS%5D%20I%20want%20to%20help&body=Hey%20Mat%2C%20I%20think%20I%20can%20help%20out%20APACAS...">I'm interested in helping the APACAS community</a></li>
+            <li><a href="mailto:hello@mrpatto.com?subject=%5BAPACAS%5D%20It's%20something%20else&body=Mat%2C%20here's%20the%20deal%3A">My purpose cannot be so easily categorised by your binary system</a></li>
+            </ul>
+            
+            
+            
+        </section>
+  <section class="newsletter">
+            <h2>Subscribe for APACAS updates</h2>
+                         <p>Sharing APAC and global-remote customer support jobs, local events, and community news.</p>
+
+<form
+  action="https://buttondown.com/api/emails/embed-subscribe/mrpatto"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.com/mrpatto', 'popupwindow')"
+  class="signup-form"
+>
+  <label for="bd-email" style="margin-top:5px">Your email</label>
+  <input type="email" name="email" id="bd-email" />
+  
+  <input type="submit" value="Subscribe" class="button" />
+
+</form>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 mt-12">
-        <div class="max-w-6xl mx-auto px-4 py-6 text-center text-gray-600">
-            <p>&copy; 2025 Apacas. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>&copy; 2025. Alpacas are a pack animal, and so are APACAS.</p>
     </footer>
+    
+    
 </body>
 </html>
